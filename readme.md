@@ -4,7 +4,7 @@ List of escapable characters in markdown.
 
 ## Installation
 
-[npm][npm-install]:
+[npm][]:
 
 ```bash
 npm install markdown-escapes
@@ -16,12 +16,10 @@ npm install markdown-escapes
 var escapes = require('markdown-escapes');
 
 // Access by property:
-escapes.commonmark;
-// ['\\', '`', ..., '@', '^']
+escapes.commonmark; //=> ['\\', '`', ..., '@', '^']
 
 // Access by options object:
-escapes({gfm: true});
-// ['\\', '`', ..., '~', '|']
+escapes({gfm: true}); //=> ['\\', '`', ..., '~', '|']
 ```
 
 ## API
@@ -62,7 +60,7 @@ List of escapable characters in CommonMark (which includes all `gfm`s).
 
 [codecov]: https://codecov.io/github/wooorm/markdown-escapes
 
-[npm-install]: https://docs.npmjs.com/cli/install
+[npm]: https://docs.npmjs.com/cli/install
 
 [license]: LICENSE
 
