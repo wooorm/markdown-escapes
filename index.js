@@ -1,14 +1,4 @@
-/**
- * @author Titus Wormer
- * @copyright 2016 Titus Wormer
- * @license MIT
- * @module markdown-escapes
- * @fileoverview List of escapable characters in markdown.
- */
-
 'use strict';
-
-/* eslint-env commonjs */
 
 /* Expose. */
 module.exports = escapes;
@@ -58,12 +48,7 @@ escapes.default = defaults;
 escapes.gfm = gfm;
 escapes.commonmark = commonmark;
 
-/**
- * Get markdown escapes.
- *
- * @param {Object?} [options] - Configuration.
- * @return {Array.<string>} - Escapes.
- */
+/* Get markdown escapes. */
 function escapes(options) {
   var settings = options || {};
 
