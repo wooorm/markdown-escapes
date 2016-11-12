@@ -1,7 +1,5 @@
 # markdown-escapes [![Build Status][travis-badge]][travis] [![Coverage Status][codecov-badge]][codecov]
 
-<!--lint disable heading-increment no-duplicate-headings-->
-
 List of escapable characters in markdown.
 
 ## Installation
