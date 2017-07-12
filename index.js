@@ -1,9 +1,7 @@
 'use strict';
 
-/* Expose. */
 module.exports = escapes;
 
-/* Characters. */
 var defaults = [
   '\\',
   '`',
@@ -43,7 +41,6 @@ var commonmark = gfm.concat([
   '^'
 ]);
 
-/* Expose characters. */
 escapes.default = defaults;
 escapes.gfm = gfm;
 escapes.commonmark = commonmark;
