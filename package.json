@@ -10,14 +10,14 @@
     "gfm",
     "commonmark"
   ],
-  "files": [
-    "index.js"
-  ],
-  "repository": "https://github.com/wooorm/markdown-escapes",
+  "repository": "wooorm/markdown-escapes",
   "bugs": "https://github.com/wooorm/markdown-escapes/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "contributors": [
     "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
+  ],
+  "files": [
+    "index.js"
   ],
   "dependencies": {},
   "devDependencies": {
@@ -53,6 +53,8 @@
     "branches": 100
   },
   "remarkConfig": {
-    "plugins": ["preset-wooorm"]
+    "plugins": [
+      "preset-wooorm"
+    ]
   }
 }
