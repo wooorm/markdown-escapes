@@ -1,10 +1,11 @@
 language: node_js
 node_js:
-- '4.0'
-- '8.0'
+- lts/boron
+- node
 after_script: bash <(curl -s https://codecov.io/bash)
 deploy:
   provider: releases
+  skip_cleanup: true
   api_key:
     secure: VIu+WiE8a1tj8/7dElew5PIEkFqKjusVCsQEdoEb9exY1t3GLknia4s6/PIGTgvLySQwpZzb7KT8oYrvgMXNiChYk8PoF5GnulYJ2Bf+tf8qY4SZlBPSkmd24IxNclF6r5icbbPcUqUjypKRCQR+qmMuUysW2w/Tr6wJ1yO+1kU2C1haAlqoed/ab6RhL6IqdrwmOIWOP0RklsRZtKQqBQ/Aobj9LSZwTGD6EBj7iL0RLPxZg77nYiYycCeBzPk9RkfKLXuWkTByYlkUtWRI/j/+sI+QpyIs/zMtxsw51o7nZbR0xSwcBWEY6e8aMR5WoWklMNhRDwto+/ursedTxkEEs07nSWPEkgAnjzRtffHuuC67s+AYBucevqIwDo69Cvf6PXG+IgUTQwmBAMx2wsQ9ODkz/YrkCouW8cIHMJNTTWGYIiCMM+D2ue+TvhUK+0q5Sk9pWI9EH3s4GGj9Z+D+jcmjcUV1wLMO/tm3tZB52IGiX5Olwsftd1VBbmUGisShgPogxcSTDa3L3JO1B5DOFInR1nvJvh+Rjkc3j0fUdPJxzCMhIMyz70fdZ1e1ZVFX0dYuzXpwnWXx6lU6RBZNI5jj2/U5mF0e6+Aa0nSJcu4u9c7f9i//4i5xPjqvYlnmwi5PuZoBmRUrenUwI/FWj/WXksj6FLVxaWJfmFM=
   file:
@@ -12,4 +13,3 @@ deploy:
     - "markdown-escapes.min.js"
   on:
     tags: true
-    node: '8.0'
