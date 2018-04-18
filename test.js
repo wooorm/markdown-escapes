@@ -1,7 +1,7 @@
 'use strict';
 
 var test = require('tape');
-var escapes = require('./');
+var escapes = require('.');
 
 test('escapes()', function (t) {
   t.ok(escapes.default.every(function (escape) {
