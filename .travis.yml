@@ -4,19 +4,12 @@ node_js:
 - '8.0'
 after_script: bash <(curl -s https://codecov.io/bash)
 deploy:
-  - provider: npm
-    email: tituswormer@gmail.com
-    api_key:
-      secure: fw+9+qxy8prDgyI06PLdjDpinIi7DcOoGvl6MK31l2oRr+oC6cvTLE9NdZyn51wDoF9+T4LZPObdkHywl8FX2awDFiqTRIr+0wVF57EeHuZfNJMXewqpk0rtOdAM6fBWBz3ZwQbb4KdMrysf9rkc309uEJjxQjFDgMzRKnsVvkgy1xOf4aOqP4fa6fSgs1hyckNm/65AbX+ARz8pRH1hf/ftbtWvRWnn0yhAEbMoMhxxt4Wz9lrhxJNhDamHsb7fUuLttULQ2cYRBvR+ybfymdqpuNjnHWAZmA1pJXFmkWo2C0UB4cFF8VlGlusuvVqF+/fhYOnTZEKoCqIcwHC0w/bIWSkiw2CCaKXZuMNfnRIydmlaprjUdTSXpo8Rv79W0hHnWO1HSeJ1zjPEznbb9hQD1efzH9dqdbkok/XyEGmQ03fA35yHFSwsPvIlp9fq6adKQgpQSwfvudDM5pO1dhddQ5upR4RcdCCOXLHIjEtn1KPD5CBcbVurQjkDUUBHhKeRSq8JW968+Vo/Gujy/KPeihvzE50L+IooPD7pBzEliOt0FcdTVkDTJpxnM9GL1DguHHUSrWJ51eELKSWJ8fKoCdTM6Z8z0M0hFMmoreUwAJpsNGUXVtsCvXzHkpXQV+R9wgPbzOTh8dW+ZfyIPgmU5qzXjOFMhzr8kqWUZ40=
-    on:
-      tags: true
-      node: '4.0'
-  - provider: releases
-    api_key:
-      secure: VIu+WiE8a1tj8/7dElew5PIEkFqKjusVCsQEdoEb9exY1t3GLknia4s6/PIGTgvLySQwpZzb7KT8oYrvgMXNiChYk8PoF5GnulYJ2Bf+tf8qY4SZlBPSkmd24IxNclF6r5icbbPcUqUjypKRCQR+qmMuUysW2w/Tr6wJ1yO+1kU2C1haAlqoed/ab6RhL6IqdrwmOIWOP0RklsRZtKQqBQ/Aobj9LSZwTGD6EBj7iL0RLPxZg77nYiYycCeBzPk9RkfKLXuWkTByYlkUtWRI/j/+sI+QpyIs/zMtxsw51o7nZbR0xSwcBWEY6e8aMR5WoWklMNhRDwto+/ursedTxkEEs07nSWPEkgAnjzRtffHuuC67s+AYBucevqIwDo69Cvf6PXG+IgUTQwmBAMx2wsQ9ODkz/YrkCouW8cIHMJNTTWGYIiCMM+D2ue+TvhUK+0q5Sk9pWI9EH3s4GGj9Z+D+jcmjcUV1wLMO/tm3tZB52IGiX5Olwsftd1VBbmUGisShgPogxcSTDa3L3JO1B5DOFInR1nvJvh+Rjkc3j0fUdPJxzCMhIMyz70fdZ1e1ZVFX0dYuzXpwnWXx6lU6RBZNI5jj2/U5mF0e6+Aa0nSJcu4u9c7f9i//4i5xPjqvYlnmwi5PuZoBmRUrenUwI/FWj/WXksj6FLVxaWJfmFM=
-    file:
-      - "markdown-escapes.js"
-      - "markdown-escapes.min.js"
-    on:
-      tags: true
-      node: '8.0'
+  provider: releases
+  api_key:
+    secure: VIu+WiE8a1tj8/7dElew5PIEkFqKjusVCsQEdoEb9exY1t3GLknia4s6/PIGTgvLySQwpZzb7KT8oYrvgMXNiChYk8PoF5GnulYJ2Bf+tf8qY4SZlBPSkmd24IxNclF6r5icbbPcUqUjypKRCQR+qmMuUysW2w/Tr6wJ1yO+1kU2C1haAlqoed/ab6RhL6IqdrwmOIWOP0RklsRZtKQqBQ/Aobj9LSZwTGD6EBj7iL0RLPxZg77nYiYycCeBzPk9RkfKLXuWkTByYlkUtWRI/j/+sI+QpyIs/zMtxsw51o7nZbR0xSwcBWEY6e8aMR5WoWklMNhRDwto+/ursedTxkEEs07nSWPEkgAnjzRtffHuuC67s+AYBucevqIwDo69Cvf6PXG+IgUTQwmBAMx2wsQ9ODkz/YrkCouW8cIHMJNTTWGYIiCMM+D2ue+TvhUK+0q5Sk9pWI9EH3s4GGj9Z+D+jcmjcUV1wLMO/tm3tZB52IGiX5Olwsftd1VBbmUGisShgPogxcSTDa3L3JO1B5DOFInR1nvJvh+Rjkc3j0fUdPJxzCMhIMyz70fdZ1e1ZVFX0dYuzXpwnWXx6lU6RBZNI5jj2/U5mF0e6+Aa0nSJcu4u9c7f9i//4i5xPjqvYlnmwi5PuZoBmRUrenUwI/FWj/WXksj6FLVxaWJfmFM=
+  file:
+    - "markdown-escapes.js"
+    - "markdown-escapes.min.js"
+  on:
+    tags: true
+    node: '8.0'
