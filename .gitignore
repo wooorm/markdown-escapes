@@ -5,3 +5,4 @@ coverage/
 node_modules/
 markdown-escapes.js
 markdown-escapes.min.js
+yarn.lock
