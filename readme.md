@@ -64,4 +64,4 @@ List of escapable characters in CommonMark (which includes all `gfm`s).
 
 [license]: license
 
-[author]: http://wooorm.com
+[author]: https://wooorm.com
