@@ -3,16 +3,16 @@
 var test = require('tape')
 var escapes = require('.')
 
-test('escapes()', function(t) {
+test('escapes()', function (t) {
   t.ok(
-    escapes.default.every(function(escape) {
+    escapes.default.every(function (escape) {
       return escapes.gfm.includes(escape)
     }),
     'all default escapes should be in gfm'
   )
 
   t.ok(
-    escapes.gfm.every(function(escape) {
+    escapes.gfm.every(function (escape) {
       return escapes.commonmark.includes(escape)
     }),
     'all gfm escapes should be in commonmark'
