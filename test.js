@@ -1,36 +1,30 @@
-'use strict'
-
-var test = require('tape')
-var escapes = require('.')
+import test from 'tape'
+import {defaults, gfm, commonmark, escapes} from './index.js'
 
 test('escapes()', function (t) {
   t.ok(
-    escapes.default.every(function (escape) {
-      return escapes.gfm.includes(escape)
+    defaults.every(function (escape) {
+      return gfm.includes(escape)
     }),
     'all default escapes should be in gfm'
   )
 
   t.ok(
-    escapes.gfm.every(function (escape) {
-      return escapes.commonmark.includes(escape)
+    gfm.every(function (escape) {
+      return commonmark.includes(escape)
     }),
     'all gfm escapes should be in commonmark'
   )
 
   t.equal(
     escapes({commonmark: true}),
-    escapes.commonmark,
+    commonmark,
     'should return commonmark escapes if `commonmark: true`'
   )
 
-  t.equal(
-    escapes({gfm: true}),
-    escapes.gfm,
-    'should return gfm escapes if `gfm: true`'
-  )
+  t.equal(escapes({gfm: true}), gfm, 'should return gfm escapes if `gfm: true`')
 
-  t.equal(escapes(), escapes.default, 'should return default escapes otherwise')
+  t.equal(escapes(), defaults, 'should return default escapes otherwise')
 
   t.end()
 })

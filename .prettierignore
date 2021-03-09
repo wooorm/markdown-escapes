@@ -1,5 +1,2 @@
 coverage/
-markdown-escapes.js
-markdown-escapes.min.js
-*.json
 *.md

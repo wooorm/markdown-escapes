@@ -1,8 +1,5 @@
 .DS_Store
 *.log
-.nyc_output/
 coverage/
 node_modules/
-markdown-escapes.js
-markdown-escapes.min.js
 yarn.lock

@@ -1,7 +1,3 @@
-'use strict'
-
-module.exports = escapes
-
 var defaults = [
   '\\',
   '`',
@@ -41,10 +37,6 @@ var commonmark = gfm.concat([
   '^'
 ])
 
-escapes.default = defaults
-escapes.gfm = gfm
-escapes.commonmark = commonmark
-
 // Get markdown escapes.
 function escapes(options) {
   var settings = options || {}
@@ -55,3 +47,5 @@ function escapes(options) {
 
   return settings.gfm ? gfm : defaults
 }
+
+export {defaults, gfm, commonmark, escapes}

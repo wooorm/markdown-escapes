@@ -9,6 +9,9 @@ List of escapable characters in markdown.
 
 ## Install
 
+This package is ESM only: Node 12+ is needed to use it and it must be `import`ed
+instead of `require`d.
+
 [npm][]:
 
 ```sh
@@ -18,18 +21,22 @@ npm install markdown-escapes
 ## Use
 
 ```js
-var escapes = require('markdown-escapes');
+import {escapes, commonmark} from 'markdown-escapes'
 
 // Access by property:
-escapes.commonmark; //=> ['\\', '`', ..., '@', '^']
+console.log(commonmark) //=> ['\\', '`', ..., '@', '^']
 
 // Access by options object:
-escapes({gfm: true}); //=> ['\\', '`', ..., '~', '|']
+console.log(escapes({gfm: true})) //=> ['\\', '`', ..., '~', '|']
 ```
 
 ## API
 
-### `escapes([options])`
+This package exports the following identifiers: `escapes`, `commonmark`, `gfm`,
+and `defaults`.
+There is no default export.
+
+### `escapes(options?)`
 
 Get escapes.
 Supports `options.commonmark` and `options.gfm`, which when `true` returns the
@@ -37,17 +44,17 @@ extra escape characters supported by those flavors.
 
 ###### Returns
 
-`Array.<string>`.
+`string[]`.
 
-### `escapes.default`
+### `defaults`
 
 List of default escapable characters.
 
-### `escapes.gfm`
+### `gfm`
 
 List of escapable characters in GFM (which includes all `default`s).
 
-### `escapes.commonmark`
+### `commonmark`
 
 List of escapable characters in CommonMark (which includes all `gfm`s).
 
