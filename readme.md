@@ -21,42 +21,20 @@ npm install markdown-escapes
 ## Use
 
 ```js
-import {escapes, commonmark} from 'markdown-escapes'
+import {markdownEscapes} from 'markdown-escapes'
 
-// Access by property:
-console.log(commonmark) //=> ['\\', '`', ..., '@', '^']
-
-// Access by options object:
-console.log(escapes({gfm: true})) //=> ['\\', '`', ..., '~', '|']
+console.log(markdownEscapes) //=> ['!', '"', '#', /* … */ '|', '}', '~']
 ```
 
 ## API
 
-This package exports the following identifiers: `escapes`, `commonmark`, `gfm`,
-and `defaults`.
+This package exports the following identifiers: `markdownEscapes`.
 There is no default export.
 
-### `escapes(options?)`
+### `markdownEscapes`
 
-Get escapes.
-Supports `options.commonmark` and `options.gfm`, which when `true` returns the
-extra escape characters supported by those flavors.
-
-###### Returns
-
-`string[]`.
-
-### `defaults`
-
-List of default escapable characters.
-
-### `gfm`
-
-List of escapable characters in GFM (which includes all `default`s).
-
-### `commonmark`
-
-List of escapable characters in CommonMark (which includes all `gfm`s).
+List of escapable characters (`string[]`) in CommonMark and GFM (they’re the
+same).
 
 ## License
 

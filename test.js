@@ -1,30 +1,20 @@
+import assert from 'assert'
 import test from 'tape'
-import {defaults, gfm, commonmark, escapes} from './index.js'
+import {markdownEscapes} from './index.js'
 
-test('escapes()', function (t) {
-  t.ok(
-    defaults.every(function (escape) {
-      return gfm.includes(escape)
-    }),
-    'all default escapes should be in gfm'
-  )
+test('markdownEscapes', function (t) {
+  t.ok(markdownEscapes.includes('!'), 'should include ascii punctuation')
 
-  t.ok(
-    gfm.every(function (escape) {
-      return commonmark.includes(escape)
-    }),
-    'all gfm escapes should be in commonmark'
-  )
-
-  t.equal(
-    escapes({commonmark: true}),
-    commonmark,
-    'should return commonmark escapes if `commonmark: true`'
-  )
-
-  t.equal(escapes({gfm: true}), gfm, 'should return gfm escapes if `gfm: true`')
-
-  t.equal(escapes(), defaults, 'should return default escapes otherwise')
+  t.doesNotThrow(function () {
+    var index = -1
+    while (++index < markdownEscapes.length) {
+      assert.equal(
+        typeof markdownEscapes[index],
+        'string',
+        markdownEscapes[index]
+      )
+    }
+  }, 'should be all strings')
 
   t.end()
 })
