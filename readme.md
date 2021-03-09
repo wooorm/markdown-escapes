@@ -57,9 +57,9 @@ List of escapable characters in CommonMark (which includes all `gfm`s).
 
 <!-- Definitions -->
 
-[build-badge]: https://img.shields.io/travis/wooorm/markdown-escapes.svg
+[build-badge]: https://github.com/wooorm/markdown-escapes/workflows/main/badge.svg
 
-[build]: https://travis-ci.org/wooorm/markdown-escapes
+[build]: https://github.com/wooorm/markdown-escapes/actions
 
 [coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/markdown-escapes.svg
 
