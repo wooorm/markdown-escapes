@@ -1,7 +1,7 @@
 {
   "name": "markdown-escapes",
   "version": "2.0.0",
-  "description": "List of escapable characters in markdown",
+  "description": "Legacy list of escapable characters in markdown",
   "license": "MIT",
   "keywords": [
     "markdown",

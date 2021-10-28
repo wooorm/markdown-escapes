@@ -1,64 +1,23 @@
 # markdown-escapes
 
-[![Build][build-badge]][build]
-[![Coverage][coverage-badge]][coverage]
-[![Downloads][downloads-badge]][downloads]
-[![Size][size-badge]][size]
+**Stability: Legacy**.
+This package is no longer recommended for use.
+It’s still covered by semantic-versioning guarantees and not yet deprecated,
+but use of this package should be avoided.
+The project
+[`micromark-util-character`](https://github.com/micromark/micromark/tree/main/packages/micromark-util-character)
+is a maintained alternative that supports many productions of characters with
+certain meanings in markdown.
 
-List of escapable characters in markdown.
-
-## Install
-
-This package is ESM only: Node 12+ is needed to use it and it must be `import`ed
-instead of `require`d.
-
-[npm][]:
-
-```sh
-npm install markdown-escapes
-```
-
-## Use
-
-```js
-import {markdownEscapes} from 'markdown-escapes'
-
-console.log(markdownEscapes) //=> ['!', '"', '#', /* … */ '|', '}', '~']
-```
-
-## API
-
-This package exports the following identifiers: `markdownEscapes`.
-There is no default export.
-
-### `markdownEscapes`
-
-List of escapable characters (`string[]`) in CommonMark and GFM (they’re the
-same).
+Old
+[documentation for this package](https://github.com/wooorm/markdown-escapes/tree/7f0a515)
+is still available in Git.
 
 ## License
 
 [MIT][license] © [Titus Wormer][author]
 
 <!-- Definitions -->
-
-[build-badge]: https://github.com/wooorm/markdown-escapes/workflows/main/badge.svg
-
-[build]: https://github.com/wooorm/markdown-escapes/actions
-
-[coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/markdown-escapes.svg
-
-[coverage]: https://codecov.io/github/wooorm/markdown-escapes
-
-[downloads-badge]: https://img.shields.io/npm/dm/markdown-escapes.svg
-
-[downloads]: https://www.npmjs.com/package/markdown-escapes
-
-[size-badge]: https://img.shields.io/bundlephobia/minzip/markdown-escapes.svg
-
-[size]: https://bundlephobia.com/result?p=markdown-escapes
-
-[npm]: https://docs.npmjs.com/cli/install
 
 [license]: license
 

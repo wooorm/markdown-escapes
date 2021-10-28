@@ -1,3 +1,8 @@
+/**
+ * Legacy list of escapable characters in markdown.
+ *
+ * @type {string[]}
+ */
 export const markdownEscapes = [
   '!',
   '"',
